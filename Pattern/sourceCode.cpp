@@ -300,6 +300,190 @@ void pattern17(int n){
     }
 }
 
+void pattern18(int n){
+    int row = 1;
+    while(row<=n){
+
+        int col = 1;
+        while(col<=n-row+1){
+            cout << "*";
+            col++;
+        }
+        cout << endl;
+        row++;
+    }
+}
+
+void pattern19(int n){
+
+    int row = 1;
+    while(row<=n){
+        int space = row-1;
+        while(space){
+            cout << " ";
+            space--;
+        }
+        int star = n - row + 1;
+        while(star){
+            cout << "*";
+            star--;
+        }
+        cout << endl;
+        row++;
+    }
+}
+
+void pattern20(int n)
+{
+
+    int row = 1;
+    while (row <= n)
+    {
+        int space = row - 1;
+        while (space)
+        {
+            cout << " ";
+            space--;
+        }
+        int star = n - row + 1;
+        while (star)
+        {
+            cout << row;
+            star--;
+        }
+        cout << endl;
+        row++;
+    }
+}
+
+void pattern21(int n){
+
+    int row = 1;
+    while(row<=n){
+        int space = n - row;
+        while (space)
+        {
+            cout << " ";
+            space--;
+            }
+
+            int print = row;
+            while (print){
+                cout << row;
+                print--;
+            }
+
+            cout << endl;
+            row++;
+        }
+        
+}
+
+void pattern22(int n){
+    int row = 1;
+    while(row<=n){
+        int space = row - 1;
+        while(space){
+            cout << " ";
+            space--;
+        }
+
+        int start = row;
+        while(start<=n){
+            cout << start;
+            start++;
+        }
+
+        cout << endl;
+        row++;
+                }
+}
+
+void pattern23(int n){
+
+    int row = 1;
+    int count = 1;
+    while(row<=n){
+        int space = n - row;
+        while(space){
+            cout << " ";
+            space--;
+        }
+        int star = row;
+        while(star){
+            cout << count;
+            count++;
+            star--;
+        }
+
+        cout << endl;
+        row++;
+    }
+}
+
+
+void pattern24(int n){
+
+    int row = 1;
+    while(row<=n){
+
+        int space = n - row;
+        while(space){
+            cout << " ";
+            space--;
+        }
+
+        int start = 1;
+        while(start<=row){
+            cout << start;
+            start++;
+        }
+
+        start = row - 1;
+        while(start){
+            cout << start;
+            start--;
+        }
+
+        cout << endl;
+        row++;
+    }
+}
+
+
+void pattern25(int n){
+
+    int row = 1;
+    while(row<=n){
+        //first numbers printing
+        int print = n - (row - 1);
+        int count = 1;
+        while(count<=print){
+            cout << count;
+            count++;
+        }
+
+        // star printing
+
+        int star = 2*(row - 1);
+        while(star){
+            cout << "*";
+            star--;
+        }
+
+        // rest printing;
+
+        count--;
+        while(count){
+            cout << count;
+            count--;
+        }
+
+        cout << endl;
+        row++;
+    }
+}
+
 
 
 
@@ -309,10 +493,12 @@ int main (){
     cout << "Enter a number";
     cin >> n;
 
-    pattern17(n);
+    pattern25(n);
 
     return 0;
 }
+
+
 
 
 
