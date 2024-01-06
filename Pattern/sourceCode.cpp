@@ -186,14 +186,64 @@ void pattern10(int n){
             cout << ch;
             col++;
         }
+        cout << endl;
+        row++;
+       
+    }
+    return;
+}
+
+void pattern11(int n){
+
+    char ch = 'A';
+    int row = 1;
+
+    while(row<=n){
+        int col = 1;
+        while (col <= n)
+        {
+
+            cout << ch;
+            ch++;
+            col++;
+        }
         row++;
         cout << endl;
+    }
+    
+}
+
+void pattern12(int n){
+
+    int row = 1;
+    while(row<=n){
+
+        int col = 1;
+        while(col<=n){
+            char ch = 'A' + row + col - 2;
+            cout << ch;
+            col++;
+        }
+        cout << endl;
+        row++;
     }
 }
 
 
+void pattern13(int n){
+    int row = 1;
+    while(row<=n){
+        int col = 1;
+        while(col<=row){
+            char ch = 'A' + row - 1;
+            cout << ch;
+            col++;
 
-
+        }
+        row++;
+        cout << endl;
+    }
+}
 
 
 int main (){
@@ -202,9 +252,10 @@ int main (){
     cout << "Enter a number";
     cin >> n;
 
-    pattern10(n);
+    pattern13(n);
 
     return 0;
 }
+
 
 
