@@ -55,10 +55,57 @@ void pattern3(int n){
 
 void pattern4(int n){
 
+    int i = 1;
+    while(i<=n){
 
+        int j = 1;
+        while(j<=i){
 
-    
+            cout <<"*";
+            j++;
+      
+        }
+        cout << endl;
+        i++;
+    }
+
 }
+
+
+void pattern5(int n){
+
+    int row = 1;
+    while(row<=n){
+
+        int col = 1;
+        while(col<=row){
+            cout << row;
+            col++;
+        }
+        cout << endl;
+        row++;
+    }
+}
+
+
+void pattern6 (int n){
+
+    int row = 1,count =1;
+    while(row<=n){
+
+        int col = 1;
+        while(col<=row){
+
+            cout << count;
+            count++;
+            col++;
+        }
+        cout << endl;
+        row++;
+    }
+}
+
+
 
 
 
@@ -69,7 +116,7 @@ int main (){
     cout << "Enter a number";
     cin >> n;
 
-    pattern3(n);
+    pattern6(n);
 
     return 0;
 }
