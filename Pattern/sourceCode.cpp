@@ -245,6 +245,63 @@ void pattern13(int n){
     }
 }
 
+void pattern14(int n){
+
+    int row = 1;
+    char ch = 'A';
+    while(row<=n){
+        int col = 1;
+        while(col<=row){
+
+            
+            cout << ch;
+            col++;
+            ch++;
+        }
+        row++;
+        cout << endl;
+    }
+}
+
+// 15th question and 16th question are same
+void pattern15(int n){
+
+    int row = 1;
+    while(row<=n){
+
+        int col = 1;
+        while(col<=row){
+            char ch = 'A' + row + col - 2;
+            cout << ch;
+            col++;
+        }
+        cout << endl;
+        row++;
+    }
+}
+
+void pattern17(int n){
+
+    int row = 1;
+    while(row<=n){
+        int space = n - row;
+        while(space){
+            cout << " ";
+            space--;
+        }
+        int star = row;
+        while(star){
+            cout << "*";
+            star--;
+        }
+
+        cout << endl;
+        row++;
+    }
+}
+
+
+
 
 int main (){
 
@@ -252,7 +309,7 @@ int main (){
     cout << "Enter a number";
     cin >> n;
 
-    pattern13(n);
+    pattern17(n);
 
     return 0;
 }
