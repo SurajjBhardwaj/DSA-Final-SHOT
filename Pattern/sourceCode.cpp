@@ -105,6 +105,92 @@ void pattern6 (int n){
     }
 }
 
+void pattern7(int n){
+
+    int row = 1;
+    while(row<=n){
+        int col = 1;
+        while(col<=row){
+            cout << row + col - 1;
+            col++;
+        }
+        cout << endl;
+        row++;
+    }
+}
+
+void pattern8(int n){
+
+    int row = 1;
+    while(row<=n){
+
+        int col = 1;
+        while(col<=row){
+            cout << row-col+1 ;
+            col++;
+        }
+        cout << endl;
+        row++;
+    }
+}
+
+
+
+void pattern9(int n){
+
+    /*
+    first method
+     int row = 1;
+        char ch = 'A';
+        while(row<=n){
+            int col = 1;
+
+            while(col<=n){
+
+                cout << ch;
+                col++;
+            }
+            ch++;
+            row++;
+            cout << endl;
+
+        }
+
+    */
+    // second  method
+
+    int row = 1;
+    while(row<=n){
+
+        int col = 1;
+        while(col<=n){
+
+            char ch = ('A' + row - 1);
+            cout << ch;
+            col++;
+        }
+        cout << endl;
+        row++;
+    }
+}
+
+
+void pattern10(int n){
+
+    int row = 1;
+    while(row<=n){
+
+        int col = 1;
+        while(col<=n){
+            char ch = 'A' + col - 1;
+            cout << ch;
+            col++;
+        }
+        row++;
+        cout << endl;
+    }
+}
+
 
 
 
@@ -116,7 +202,7 @@ int main (){
     cout << "Enter a number";
     cin >> n;
 
-    pattern6(n);
+    pattern10(n);
 
     return 0;
 }
