@@ -1,6 +1,56 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*
+
+Trick to solve any pattern problem
+
+       1. Find the no of rows ( it will be the length of outer loop )
+       2. Find the number of column (How many times you need to print)
+       3. what to print ?
+
+let's see with an example:
+
+problem :
+
+for n=4
+
+* * * * | Row 1 | how many times print ? 4
+* * *   | Row 2 |  3
+* *     | Row 3 |  2
+*       | Row 4 |  1
+
+
+Just go with our trick :
+1. no of rows ?
+ans : 4 ( that means we need to run an outer loop for 4 time,
+that is n so run the outer loop for n time )
+
+2. No of columns to print in each rows ?
+ans: Obserb from the answer ! now relate the column with n and rows ?
+
+we need to print 4 time in 1st row
+                 3 time in 2nd row
+                 2 time in 3rd row
+                 1 time in 4th row
+
+                 that is (n-(row-1))time in nth row
+
+ this row will give the answer for inner loop length.
+
+ 3. what to print & how to print ?
+ ans: we have only one thing to print here ! that is "*"
+
+
+ so consolusion:
+             Run outer loop for n time !
+             inner loop for n-(row-1)time
+             we need to print "*"                
+
+now check pattern18(), the same logic we implemented and we got the result
+
+*/
+
 void pattern1 (int n){
 
     int i = 1;
