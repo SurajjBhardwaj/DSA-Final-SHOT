@@ -852,6 +852,90 @@ void pattern25(int n){
 
 ```
 
+26. A boom one ( Must try )
+
+```
+Input: n = 3
+Output: 
+1*2*3*10*11*12
+--4*5*8*9
+----6*7
+
+```
+
+
+Even in this question we implemented the same trick but according to question,
+question was asked to return an array of string
+where each element of that vector is representing one line of the patter.
+
+
+```
+Here is the logic:
+
+//divided the question in 3 three part, 
+
+1. first for space,
+
+2. second for normal counting while going from n to 2*n
+
+3. third one is the remaining part, which is implement after the data is saved in that array! 
+
+
+vector<string> pattern(int n){
+        // code here
+        vector<string>ans;
+        
+        int row =1,count=1;
+        while(row<=n){
+            
+            string s ="";
+            int star = 2*(row-1);
+            
+            while(star){
+                char ch = '--';
+                s+=ch;
+                star--;
+            }
+              
+            int col = n-(row-1);
+            while(col){
+                s+=to_string(count);
+                char ch ='*';
+                s+=ch;
+                count++;
+                col--;
+            }           
+            ans.push_back(s);
+        row++;
+            
+        }
+
+        row = ans.size()-1;     
+        while(row>=0){        
+           int col = n-row;         
+           while(col>0){
+
+               ans[row]+=to_string(count);
+               col--;
+               count++;
+               
+               if(col>0){
+                   char ch ='*';
+                    ans[row]+=ch;
+               }             
+           }
+           
+           row--;
+        }  
+        return ans;  
+    }
+
+
+
+```
+
+
+
 
 
 <h1>Trick to solve all the question</h1>
